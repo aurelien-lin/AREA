@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Bebas+Neue&family=Shizuru&display=swap');
+
+.navbar {
+  background-color: #3478ad;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  max-width: 1500px;
+}
+
+.logo {
+  width: 8%;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-left: -200px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin-right: 2rem;
+}
+
+.nav-links {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+}
+
+.fa-code {
+  margin-left: 1rem;
+}
+
+.nav-item {
+  line-height: 40px;
+  margin-right: 1rem;
+}
+
+.nav-item:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width 0.7s ease, background-color 0.5s ease;
+}
+
+.nav-item:hover:after {
+  width: 100%;
+  background: white;
+}
+
+.nav-item .active {
+  color: white;
+  border: 1px solid white;
+}
+
+.nav-icon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1pxsolid #fff;
+    position: absolute;
+    top: 80px;
+    left: -110%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: #1f5156;
+    left: 0px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-item .active {
+    color: white;
+    border: none;
+  }
+
+  .nav-links {
+    padding: 1.5rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  font-size: 50px;
+  font-family: 'Bebas Neue', cursive, sans-serif;
+}
+
+.search-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.search-bar {
+  padding-left: 10px;
+  margin-right: 50px;
+  height: 75px;
+  width: 300px;
+  border-radius: 20px;
+  font-size: 30px;
+  font-family: 'Bebas Neue', cursive, sans-serif;
+}
+
+.search-button {
+  font-family: 'Bebas Neue', cursive, sans-serif;
+  width: 80px;
+  border-radius: 20px;
+  background: #3478ad;
+  color: white;
+  border: none;
+}
+
+/* UTILES */
+/* Colors */
+:root{
+  --grey-color: #D3D3D3;
+  --buttonON-color: #3c6495;
+  --textOf: "2F03F0F";
+}
+
+.Button{
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12;
+  margin-right: 32;
+  border-radius: 4;
+  box-shadow: 3;
+  border-radius: 5px;
+  width: 200px;
+  padding: 20px 20px;
+  margin: 10px 10px;
+  cursor: pointer;
+  background-color: var(--buttonON-color);
+}
+
+.txt {
+  text-align: center;
+  justify-content: left;
+  margin-top: 50px;
+  padding-left: 20px;
+  font-size: 22px;
+  font-family: 'Bebas Neue', cursive, sans-serif;
+  font-weight: bold;
+}
+
+.hTxt {
+  text-align: center;
+  justify-content: left;
+  margin-top: 50px;
+  padding-left: 20px;
+  font-size: 20px;
+  /*color: var(--grey-color)*/
+}
+
+/* HOME */
+
+.HomeContainer {
+  display: grid;
+  grid-row: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1fr;
+  height: 100%;
+  padding-top: 25px;
+}
+
+.HomeLeft {
+  grid-row: 1;
+  width: 50%;
+}
+
+.HomeRight {
+  grid-row: 1;
+  width: 50%;
+}
+
+
+.WidNot{
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-right: 10px;
+  justify-content: center;
+  background-color: var(--blue-color);
+}
+
+.widget{
+  align-items: center;
+  justify-content: center;
+  margin-left: 6%;
+  width: 88%;
+}
+
+.test{
+  width: 100%;
+  height: 100%;
+  size: 100%;
+}
+
+.WidNotDysplay{
+  /*background-color: var(--grey-color);*/
+  justify-content: center;
+  align-items: center;
+}
+
+.DashSpace{
+  justify-content: center;
+  padding-top: 15;
+  padding-right: 10%;
+  padding-bottom: 15;
+/*  width: "90%";*/
+}
+
+.ButtonOf{
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12;
+  margin-right: 32;
+  box-shadow: 3;
+  width: 200px;
+  padding: 21px 20px;
+  margin: 10px 10px;
+  cursor: pointer;
+  background-color: var(--buttonOf-color);
+  border-radius: 10px;
+  background-color: #2d5279;
+
+}
+
+.ButtonOfTxt{
+ color: white;
+ font-size: 20px;
+ font-weight: bold;
+}
+
+.widView{
+  padding-left: 10;
+  padding-right: 10;
+  box-shadow: 0px 0px 1px 1px;
+  color: white;
+}
+
+.widSpace{
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ background-color: #395e7e;
+}
+
+
+
+/* Widgect */
+
+/* profile */
+
+.center {
+  padding-top: 10px;
+  margin: 10px;
+  justify-content: center;
+ align-items: center;
+ text-align: center;
+}
+
+.CovidInput{
+  padding-left: 4%;
+  padding-right: 4%;
+  width: 90%;
+  height: 90%;
+}
+
+.timeInput{
+  padding-left: 4%;
+  padding-right: 4%;
+  width: 90%;
+  height: 90%;
+}
+
+.MoneyInput{
+  padding-left: 4%;
+  padding-right: 4%;
+  width: 90%;
+  height: 90%;
+}
+
+.BitcoinInput{
+  padding-left: 4%;
+  padding-right: 4%;
+  width: 90%;
+  height: 90%;
+}
+
+.GithubInput{
+  padding-left: 4%;
+  padding-right: 4%;
+  width: 90%;
+  height: 90%;
+}
+
+.NewsInput{
+  padding-left: 4%;
+  padding-right: 4%;
+  width: 90%;
+  height: 90%;
+}
+
+.WeatherInput{
+  padding-left: 4%;
+  padding-right: 4%;
+  width: 90%;
+  height: 90%;
+}
+
+.airpollutionInput{
+  padding-left: 4%;
+  padding-right: 4%;
+  width: 90%;
+  height: 90%;
+}
+
+.geocodingInput{
+  padding-left: 4%;
+  padding-right: 4%;
+  width: 90%;
+  height: 90%;
+}
+
+.uvInput{
+  padding-left: 4%;
+  padding-right: 4%;
+  width: 90%;
+  height: 90%;
+}
+
+.searchInput{
+  padding-left: 4%;
+  padding-right: 4%;
+  width: 90%;
+  height: 90%;
+}
+
+.LoLInput{
+  padding-left: 4%;
+  padding-right: 4%;
+  width: 90%;
+  height: 90%;
+}
+
+.cspotifyInput{
+  padding-left: 4%;
+  padding-right: 4%;
+  width: 90%;
+  height: 90%;
+}
+
+/*  */
+
+.OptButton{
+  width: intrinsic;
+  height: intrinsic;
+}

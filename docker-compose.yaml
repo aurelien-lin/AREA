@@ -1,0 +1,55 @@
+version: "3"
+services:
+  client_mobile:
+    container_name: Mobile_Client
+    build:
+      dockerfile: Dockerfile
+      context: ./Mobile_Client
+    volumes:
+      - apk-volume:/usr/app/
+
+  mongoDB:
+    image: mongo:latest
+    container_name: mongoDB
+    ports:
+      - "27017:27017"
+    networks:
+      - back-tier
+    volumes:
+      - mongo-data:/var/lib/mongo/data
+
+  app_server:
+    container_name: App_Server
+    build:
+      dockerfile: Dockerfile
+      context: ./App_Server
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongoDB
+    networks:
+      - back-tier
+    links:
+      - mongoDB
+    volumes:
+      - apk-volume:/usr/app/
+
+  client_web:
+    container_name: Web_Client
+    build:
+      dockerfile: Dockerfile
+      context: ./Web_Client
+    ports:
+      - "8081:8081"
+    depends_on:
+      - app_server
+      - client_mobile
+    volumes:
+      - apk-volume:/usr/app/
+
+networks:
+  back-tier:
+
+volumes:
+  apk-volume:
+  mongo-data:
